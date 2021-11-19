@@ -456,6 +456,10 @@ font-size: 16px;
   transition: 0.3s ease-out;
 }
 
+.info__img--contact {
+  background-image: url("./img/sections/clients.jpg");
+}
+
 #contact .info__img--placeholder {
   background-color: initial;
 }
@@ -533,6 +537,7 @@ font-size: 16px;
 .contact__form--wrapper input {
   padding: 5px 5px 5px 0 ;
   border-color: #B1B1B1;
+  color: #000;
 }
 
 .contact__form--wrapper input:focus {
@@ -587,6 +592,25 @@ font-size: 16px;
 .contact__form--button:disabled .chevron {
   opacity: .2;
 
+}
+
+.thank__you--message {
+  cursor: initial;
+  visibility: hidden;
+  color: #4F4F4F;
+  font-family: var(--oswald-bold);
+  font-size: 24px;
+  /* opacity: 1; */
+  transition: all .3s linear;
+  text-transform: uppercase;
+}
+.thank__you--message.show {
+  visibility: visible;
+  transition: all .3s linear;
+}
+
+.contact__form--button.no-show {
+  display: none;
 }
 
 #map {

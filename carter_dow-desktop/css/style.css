@@ -334,7 +334,7 @@
   background-color: transparent;
   border: unset;
   padding: 0;
-  z-index: 100;
+  /* z-index: 100; */
 }
 .carousel__btn--right {
   right: 54px;
@@ -428,6 +428,8 @@
 .caption__category, .caption__details {
   color: #fff;
   font-family: var(--oswald-regular);
+  opacity: 1;
+  transition: all .4s ease;
 }
 .caption__category {
   margin-right: 10px;
@@ -605,7 +607,10 @@ font-size: 16px;
 
 #contact .info__img--placeholder {
   background-color: initial;
+}
 
+.info__img--contact {
+  background-image: url("./img/sections/clients.jpg");
 }
 .contact__info {
   margin-bottom: 50px;
@@ -678,6 +683,7 @@ font-size: 16px;
 .contact__form--wrapper input {
   padding: 5px 5px 5px 0 ;
   border-color: #B1B1B1;
+  color: #000;
 }
 
 .contact__form--wrapper input:focus {
@@ -703,6 +709,7 @@ font-size: 16px;
   position: relative;
   font-family: var(--oswald-bold);
   text-transform: uppercase;
+  transition: all .3s linear;
 }
 
 .contact__form--button .chevron {
@@ -738,6 +745,25 @@ font-size: 16px;
   opacity: .2;
 
 }
+.thank__you--message {
+  cursor: initial;
+  visibility: hidden;
+  color: #4F4F4F;
+  font-family: var(--oswald-bold);
+  font-size: 24px;
+  /* opacity: 1; */
+  transition: all .3s linear;
+  text-transform: uppercase;
+}
+.thank__you--message.show {
+  visibility: visible;
+  transition: all .3s linear;
+}
+
+.contact__form--button.no-show {
+  display: none;
+}
+
 
 #map {
   height: 100%;
