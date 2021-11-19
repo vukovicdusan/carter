@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <title>Carter Dow</title>
+  </head>
+  <body id="portfolio__single" onload="topBar()">
+    <div class="loader"><div class="loader--bar"></div></div>
+    
+    <nav class="nav">
+      <a href="index.html" class="nav__logo"><img src="./css/img/LOGO_v.svg" alt="logo"></a>
+      <div class="hamburger__wrapper">
+        <input type="checkbox" class="hamburger__checker" name="hamburger" />
+        <div class="hamburger__lines"></div>
+        <div class="nav__menu">
+          <ul class="nav__menu--list">
+            <li class="nav__menu--list__item">
+              <a href="portfolio.html" class="list__item--link">Portfolio</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="clients.html" class="list__item--link">Clients</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="bio.html" class="list__item--link">Bio</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="links.html" class="list__item--link">Links</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="contact.html" class="list__item--link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="portfolio__single--wrapper">
+      <div class="portfolio__slider">
+        <div class="portfolio__slider--wrapper">
+          <div class="portfolio__slider--img"></div>
+          <!-- <img src="./css/img/portfolio/1.jpg" alt="" class="portfolio__slider--img">
+          <img src="./css/img/portfolio/2.jpg" alt="" class="portfolio__slider--img">
+          <img src="./css/img/portfolio/3.jpg" alt="" class="portfolio__slider--img">
+          <img src="./css/img/portfolio/4.jpg" alt="" class="portfolio__slider--img">
+          <img src="./css/img/portfolio/5.jpg" alt="" class="portfolio__slider--img">
+          <img src="./css/img/portfolio/6.jpg" alt="" class="portfolio__slider--img"> -->
+          <button class="slider__button slider__button--left"><span></span></button>
+          <button class="slider__button slider__button--right"><span></span></button>
+        </div>
+      </div>
+      <div class="caption__wrapper">
+        <input type="checkbox" name="caption_check" class="caption__checker">
+        <div class="caption__checker--closer"><img src="./css/img/Menu_X_close.svg" alt="close icon"></div>
+        <div class="caption__checker--label">Caption</div>
+      <div class="caption__line">
+        <div class="caption__category">Category</div>
+        <div class="caption__details">Lorem, ipsum.</div>
+      </div>
+      </div> 
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

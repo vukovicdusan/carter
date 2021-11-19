@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <title>Carter Dow</title>
+  </head>
+  <body id="home" onload="randomBackground(), intro(), topBar()">
+    <div class="loader"><div class="loader--bar"></div></div>
+    <div class="intro__wrapper">
+        <h1 class="intro__title"><a class="intro__title--link" href="home.html"><img src="./css/img/LOGO_h.svg" alt="logo"></a></h1>
+    </div>
+    <div class="home__background">
+      <nav class="nav">
+        <a href="portfolio.html" class="nav__logo"><img src="./css/img/LOGO_h.svg" alt="logo"></a>
+        <div class="hamburger__wrapper">
+          <input type="checkbox" class="hamburger__checker" name="hamburger" />
+          <div class="hamburger__lines"></div>
+          <div class="nav__menu">
+            <ul class="nav__menu--list">
+              <li class="nav__menu--list__item">
+                <a href="portfolio.html" class="list__item--link">Portfolio</a>
+              </li>
+              <li class="nav__menu--list__item">
+                <a href="clients.html" class="list__item--link">Clients</a>
+              </li>
+              <li class="nav__menu--list__item">
+                <a href="bio.html" class="list__item--link">Bio</a>
+              </li>
+              <li class="nav__menu--list__item">
+                <a href="links.html" class="list__item--link">Links</a>
+              </li>
+              <li class="nav__menu--list__item">
+                <a href="contact.html" class="list__item--link">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

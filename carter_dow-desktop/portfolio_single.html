@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <title>Carter Dow</title>
+  </head>
+  <body id="portfolio__single" onload="topBar()">
+    <div class="loader"><div class="loader--bar"></div></div>
+    
+    <nav class="nav">
+      <a href="portfolio.html" class="nav__logo"><img src="./css/img/LOGO_v.svg" alt="logo"></a>
+      <div class="hamburger__wrapper">
+        <input type="checkbox" class="hamburger__checker" name="hamburger" />
+        <div class="hamburger__lines"></div>
+        <div class="nav__menu">
+          <ul class="nav__menu--list">
+            <li class="nav__menu--list__item">
+              <a href="portfolio.html" class="list__item--link">Portfolio</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="clients.html" class="list__item--link">Clients</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="bio.html" class="list__item--link">Bio</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="links.html" class="list__item--link">Links</a>
+            </li>
+            <li class="nav__menu--list__item">
+              <a href="contact.html" class="list__item--link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="portfolio__single--wrapper">
+      <div class="portfolio__slider"> -->
+
+        <div class="carousel__container">
+          <div class="carousel__slide">
+            <img id="last__clone" src="./css/img/portfolio-single/4.jpg" alt="" class="slide">
+            <img src="./css/img/portfolio-single/1.jpg" alt="" class="slide">
+            <img src="./css/img/portfolio-single/2.jpg" alt="" class="slide">
+            <img src="./css/img/portfolio-single/3.jpg" alt="" class="slide">
+            <img src="./css/img/portfolio-single/4.jpg" alt="" class="slide">
+    
+            <img id="first__clone" src="./css/img/portfolio-single/1.jpg" alt="" class="slide">
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--right" id="next__btn">
+          <img src="./css/img/Portfolio_arrow_right.svg" alt="button icon">
+        </button>
+        <button class="carousel__btn carousel__btn--left" id="prev__btn">
+          <img src="./css/img/Portfolio_arrow_left.svg" alt="button icon">
+        </button>
+          <div class="caption__wrapper">
+            <input type="checkbox" name="caption_check" class="caption__checker">
+              <div class="caption__checker--closer">
+                <img src="./css/img/Caption_X_close.svg" alt="close icon">
+              </div>
+              <div class="caption__checker--label">Caption</div>
+              <div class="caption__line">
+                <div class="caption__category">Category</div>
+                <div class="caption__details">Lorem, ipsum.</div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>
