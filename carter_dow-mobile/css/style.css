@@ -477,20 +477,24 @@ font-size: 16px;
   text-transform: uppercase; 
 }
 
-.contact__info p:nth-child(3) {
+.contact__info p:nth-child(4) {
   margin-bottom: 20px;  
+  text-decoration: none;
+  color: inherit;
 }
-
-.contact__info p:nth-child(4):focus, .contact__info p:nth-child(5):focus {
+.contact__info p:nth-child(4) a {
+ 
+  text-decoration: none;
+  color: inherit;
+}
+.contact__info p:nth-child(5):hover, .contact__info p:nth-child(6):hover,  .contact__info p:nth-child(4):hover{
   cursor: pointer;
   color: var(--hover-color);
 } 
-
-.contact__info p:nth-child(4) a, .contact__info p:nth-child(5) a {
+.contact__info p:nth-child(5) a, .contact__info p:nth-child(6) a {
   text-decoration: none;
   color: inherit;
 } 
-
 .soc__links {
   margin-top: 20px;
 }
@@ -512,6 +516,7 @@ font-size: 16px;
   display: flex;
   flex-direction: column ;
   width: 214px;
+  position: relative;
 }
 
 .contact__form--title {
@@ -561,6 +566,8 @@ font-size: 16px;
   font-family: var(--oswald-bold);
   text-transform: uppercase;
   margin-left: 15px;
+  opacity: 1;
+  transition: all .4 linear;
 }
 
 .contact__form--button .chevron {
@@ -600,9 +607,11 @@ font-size: 16px;
   color: #4F4F4F;
   font-family: var(--oswald-bold);
   font-size: 24px;
-  /* opacity: 1; */
+  opacity: 1;
   transition: all .3s linear;
   text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
 }
 .thank__you--message.show {
   visibility: visible;
@@ -610,7 +619,9 @@ font-size: 16px;
 }
 
 .contact__form--button.no-show {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s linear;
 }
 
 #map {

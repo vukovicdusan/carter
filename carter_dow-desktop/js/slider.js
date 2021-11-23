@@ -3,6 +3,11 @@
 const carouselSlide = document.querySelector(".carousel__slide");
 const carouselImages = document.querySelectorAll(".slide");
 
+const caption = document.querySelectorAll('.caption__line');
+const current = document.querySelector('.current');
+const nextCaption = current.nextElementSibling;
+const prevCaption = current.previousElementSibling;
+
 /* BUTTONS */
 const prev = document.getElementById("prev__btn");
 const next = document.getElementById("next__btn");
@@ -11,16 +16,12 @@ const next = document.getElementById("next__btn");
 let counter = 1;
 let size = carouselSlide.clientWidth;
 
-// let counter = 1
-// let size = carouselImages[0].clientWidth
+
 
 window.addEventListener('resize', () => {
-  // size = carouselImages[0].clientWidth
+
   size = carouselSlide.clientWidth;
   carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-  // ...
-  // ...
-  
 })
 
 
@@ -28,15 +29,27 @@ window.addEventListener('resize', () => {
 
 /* BUTTON LISTENERS */
 next.addEventListener('click',() => {
+  const current = document.querySelector('.current');
+const nextCaption = current.nextElementSibling;
   if(counter >= carouselImages.length-1){
     return;
   }
   carouselSlide.style.transition = "transform .4s ease-in-out";
   counter++;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
+
+  if (caption[caption.length - 1].classList.contains("current")) {
+    caption[0].classList.add("current");
+    caption[caption.length - 1].classList.remove("current");
+  } else {  
+    current.classList.remove("current");
+    nextCaption.classList.add("current");
+  }
 } );
 
 prev.addEventListener('click',() => {
+  const current = document.querySelector('.current');
+const prevCaption = current.nextElementSibling;
   console.log("next clicked");
   if(counter <= 0){
     return;
@@ -44,6 +57,15 @@ prev.addEventListener('click',() => {
   carouselSlide.style.transition = "transform .4s ease-in-out";
   counter--;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
+
+  if (caption[caption.length - 1].classList.contains("current")) {
+    caption[0].classList.add("current");
+    caption[caption.length - 1].classList.remove("current");
+  } else {  
+    current.classList.remove("current");
+    prevCaption.classList.add("current");
+  }
+
 } );
 
 carouselSlide.addEventListener('transitionend', ()=> {
@@ -57,4 +79,8 @@ carouselSlide.addEventListener('transitionend', ()=> {
     counter = carouselImages.length-counter;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
   }
+ 
 });
+
+
+ 
