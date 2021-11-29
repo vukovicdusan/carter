@@ -49,8 +49,7 @@ const nextCaption = current.nextElementSibling;
 
 prev.addEventListener('click',() => {
   const current = document.querySelector('.current');
-const prevCaption = current.nextElementSibling;
-  console.log("next clicked");
+  const prevCaption = current.previousElementSibling;
   if(counter <= 0){
     return;
   }
@@ -58,9 +57,10 @@ const prevCaption = current.nextElementSibling;
   counter--;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
 
-  if (caption[caption.length - 1].classList.contains("current")) {
-    caption[0].classList.add("current");
-    caption[caption.length - 1].classList.remove("current");
+  caption[0].classList.add('its-me');
+  if (caption[0].classList.contains("current")) {
+    caption[caption.length-1].classList.add('current');
+    caption[0].classList.remove("current");
   } else {  
     current.classList.remove("current");
     prevCaption.classList.add("current");
